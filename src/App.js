@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DashboardLayout from './components/DashboardLayout';
-import PatientInformation from './components/PatientInformation';
-import LineChart from './components/Visualization/LineChart';
-import DataTable from './components/DataTable';
+import DashboardLayout from './Components/DashboardLayout';
+import PatientInformation from './Components/PatientInformation';
+import LineChart from './Components/Visualization/LineChart';
+import DataTable from './Components/DataTable';
 import logo from './logo.svg';
 import './App.css';
 
