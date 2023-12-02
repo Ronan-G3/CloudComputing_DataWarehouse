@@ -5,6 +5,7 @@ const DashboardLayout = ({ children }) => {
     <div>
       <header>
         {/* Navigation bar, logo, and any other top-level items */}
+        Hello World!
       </header>
       <main>{children}</main>
       <footer>

@@ -1,22 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import DashboardLayout from './Components/DashboardLayout';
 import PatientInformation from './Components/PatientInformation';
-import LineChart from './Components/Visualization/LineChart';
+import LineChart from './Components/Visualisation/LineChart';
 import DataTable from './Components/DataTable';
-import logo from './logo.svg';
+import TestApiConnection from './Components/TestApiConnection';
+
 import './App.css';
 
 function App() {
+    console.log('App component is rendering');
   return (
     <Router>
       <DashboardLayout>
-        <Switch>
-          <Route path="/patients" component={PatientInformation} />
-          <Route path="/charts" component={LineChart} />
-          <Route path="/data-table" component={DataTable} />
+        <Routes>
+          <Route path="/patients" element={<PatientInformation />} />
+          <Route path="/charts" element={<LineChart />} />
+          <Route path="/data-table" element={<DataTable />} />
+          <Route path="/test-connection" element={<TestApiConnection />} />
           {/* ... other routes */}
-        </Switch>
+        </Routes>
       </DashboardLayout>
     </Router>
   );
