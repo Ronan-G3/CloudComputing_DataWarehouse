@@ -1,18 +1,12 @@
 import React from 'react';
 
-const DashboardLayout = ({ children }) => {
-  return (
-    <div>
-      <header>
-        {/* Navigation bar, logo, and any other top-level items */}
-        Hello World!
-      </header>
-      <main>{children}</main>
-      <footer>
-        {/* Footer information */}
-      </footer>
-    </div>
-  );
-};
+// Simplified DashboardLayout.js
+const DashboardLayout = ({ children }) => (
+  <div>
+    <header>{/* Your Navbar Here */}</header>
+    <main>{children}</main>
+    <footer>{/* Your Footer Here */}</footer>
+  </div>
+);
 
 export default DashboardLayout;

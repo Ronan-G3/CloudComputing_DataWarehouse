@@ -1,28 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { HeartDataProvider } from './context/HeartDataContext';
+import HeartDataTable from './Components/HeartDataTable';
 import DashboardLayout from './Components/DashboardLayout';
-import PatientInformation from './Components/PatientInformation';
-import LineChart from './Components/Visualisation/LineChart';
-import DataTable from './Components/DataTable';
-import TestApiConnection from './Components/TestApiConnection';
 
 import './App.css';
 
-function App() {
-    console.log('App component is rendering');
+const App = () => {
   return (
     <Router>
-      <DashboardLayout>
-        <Routes>
-          <Route path="/patients" element={<PatientInformation />} />
-          <Route path="/charts" element={<LineChart />} />
-          <Route path="/data-table" element={<DataTable />} />
-          <Route path="/test-connection" element={<TestApiConnection />} />
-          {/* ... other routes */}
-        </Routes>
-      </DashboardLayout>
+      <HeartDataProvider>
+        <DashboardLayout>
+          <Routes>
+            <Route path="/data-table" element={<HeartDataTable />} />
+            {/* Redirect from home page to data table */}
+            <Route path="/" element={<Navigate replace to="/data-table" />} />
+          </Routes>
+        </DashboardLayout>
+      </HeartDataProvider>
     </Router>
   );
-}
+};
 
 export default App;
