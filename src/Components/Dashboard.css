@@ -1,0 +1,7 @@
+/* App.css or Dashboard.css */
+.dashboard {
+    padding: 2rem;
+    max-width: 1200px; /* or any max-width you prefer */
+    margin: 0 auto; /* This centers your dashboard */
+  }
+  

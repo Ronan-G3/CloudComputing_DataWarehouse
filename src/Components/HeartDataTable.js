@@ -1,10 +1,12 @@
+// HeartDataTable.js
 import React, { useContext } from 'react';
 import { HeartDataContext } from '../context/HeartDataContext';
 
-const HeartDataTable = () => {
-  const { heartData1 } = useContext(HeartDataContext);
+const HeartDataTable = ({ dataset }) => {
+  const context = useContext(HeartDataContext);
+  const data = dataset === "1" ? context.heartData1 : context.heartData2;
 
-  if (!heartData1 || heartData1.length === 0) {
+  if (!data) {
     return <div>Loading...</div>;
   }
 
@@ -30,7 +32,7 @@ const HeartDataTable = () => {
           </tr>
       </thead>
       <tbody>
-        {heartData1.map((row, index) => (
+        {data.map((row, index) => (
           <tr key={index}>
             <td>{row.patient_id}</td>
             <td>{row.age}</td>

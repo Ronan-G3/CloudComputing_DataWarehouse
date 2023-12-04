@@ -5,8 +5,10 @@
   }
   
   main {
-    flex: 1;
-    padding: 20px;
-    /* Add more styles */
+    flex-grow: 1;
+    padding: 2rem;
+    background: #f9f9f9;
   }
+  
+  /* Add more styles for Navbar, Footer, and other components */
   
