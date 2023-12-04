@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { HeartDataProvider } from './context/HeartDataContext';
 import Dashboard from './Components/Dashboard';
 import HeartDataTable from './Components/HeartDataTable';
+import HeartData2Table from './Components/HeartData2Table';
 import './App.css'; // Ensure your main styles are imported
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dataset1" element={<HeartDataTable dataset="1" />} />
-            <Route path="/dataset2" element={<HeartDataTable dataset="2" />} />
+            <Route path="/data2" element={<HeartData2Table />} />
           </Routes>
         </div>
       </Router>

@@ -40,3 +40,53 @@
 main {
   padding: 20px;
 }
+
+/* Navbar.css */
+.navbar {
+  background-color: #004d99; /* A shade of blue, you can choose your own color */
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #003366; /* Darker shade for hover state */
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* App.css or Dashboard.css */
+.dashboard {
+  padding: 2rem;
+  max-width: 1200px; /* or any max-width you prefer */
+  margin: 0 auto; /* This centers your dashboard */
+}
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+/* Add more styles for Navbar, Footer, and other components */
+
